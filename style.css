@@ -17,14 +17,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-body {
-  background-image: url('https://imgur.com/G5MWnK0.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+background-image: url('https://imgur.com/G5MWnK0.jpg'); /* Thay URL bằng đường dẫn ảnh của bạn */
+    background-size: cover;       /* Ảnh bao phủ toàn bộ màn hình */
+    background-position: center;  /* Ảnh được căn giữa */
+    background-repeat: no-repeat; /* Không lặp ảnh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
 .card {
   width: 300px;
   height: 400px;
@@ -54,14 +55,7 @@ body {
   border: unset;
   transform: unset;
 }
-body {
-    display: flex;
-    justify-content: flex-end; /* Đưa vào góc phải */
-    align-items: flex-end; /* Đưa vào dưới cùng */
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0; /* Loại bỏ margin mặc định */
-}
+
 img {
   width: 100%;
   height: 100%;
