@@ -63,52 +63,6 @@ body {
     background-color: #f0f0f0;
     margin: 0; /* Loại bỏ margin mặc định */
 }
-
-/* Đặt nền */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #282828;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Tạo đĩa nhạc nhỏ hơn */
-.record {
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, #555 35%, #222 70%, #111 100%);
-    border-radius: 50%;
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Hiệu ứng thu phóng khi nhấp */
-}
-
-/* Trung tâm của đĩa */
-.record::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
-    background-color: #f33;
-    border-radius: 50%;
-}
-
-/* Xoay khi phát nhạc */
-.spin {
-    animation: spin 5s linear infinite;
-}
-
-/* Hiệu ứng xoay */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 img {
   width: 100%;
   height: 100%;
