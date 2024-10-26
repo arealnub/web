@@ -1,9 +1,12 @@
 const audio = document.getElementById("audio");
+const record = document.querySelector(".record");
 
-function playAudio() {
-    audio.play();
-}
-
-function pauseAudio() {
-    audio.pause();
+function togglePlay() {
+    if (audio.paused) {
+        audio.play();
+        record.classList.add("spin");
+    } else {
+        audio.pause();
+        record.classList.remove("spin");
+    }
 }
