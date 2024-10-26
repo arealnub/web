@@ -64,28 +64,66 @@ body {
     margin: 0; /* Loại bỏ margin mặc định */
 }
 
-.disk-container {
-    position: relative;
-    margin: 20px; /* Khoảng cách từ cạnh */
+/* Đặt nền */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282828;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.disk {
-    width: 100px; /* Kích thước của đĩa nhạc */
-    height: 100px; /* Kích thước của đĩa nhạc */
-    background-image: url('your-disk-image.png'); /* Hình ảnh đĩa nhạc */
-    background-size: cover;
+/* Tạo đĩa nhạc */
+.record {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #555 35%, #222 70%, #111 100%);
     border-radius: 50%;
+    position: relative;
     animation: spin 5s linear infinite;
-    cursor: pointer; /* Thêm con trỏ khi hover */
 }
 
+/* Tạo trung tâm của đĩa */
+.record::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: #f33;
+    border-radius: 50%;
+}
+
+/* Hiệu ứng xoay */
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Nút điều khiển */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #f33;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d22;
 }
 img {
   width: 100%;
